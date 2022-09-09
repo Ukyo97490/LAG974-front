@@ -123,12 +123,31 @@ margin-top: -1px;
     text-align: center;
     background-color: pink;
 }
+
+
+
 .content{
-    width:80%;
+    width:100vw;
     height:800px;
+    display: flex;
+}
+.sideleft{
+    width:10vw;
+    padding:2%;
     text-align: center;
-    background-color: orange;
-    margin: auto;
+    background-color: aqua;
+}
+.content-block{
+    width:80vw;
+    padding:2%;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+.sideright{
+    width:10vw;
+    padding:2%;
+    text-align: center;
+    background-color: brown;
 }
 .footer{
     width: 100%;
