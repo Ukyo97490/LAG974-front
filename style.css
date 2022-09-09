@@ -1,0 +1,120 @@
+*,::before,::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background:#333;
+    font-family: "Gotu",sans-serif;
+
+}
+/* NAVIGATION  */
+/* La navbar  */
+nav{
+    width: 100%;
+    height:50px;
+    background: #f1f1f1;
+    position: fixed;
+}
+.list-nav{
+    list-style-type:none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+.item{
+    height:100%;
+    text-align: center;
+    line-height: 50px;
+    padding: 3px 10px 0px 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+}
+.item::after{
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    border-radius: 5px;
+    background:#ffc300;
+    margin: -15px auto 0 auto;
+    transition: width 0.2s ease-in-out;
+}
+.item:hover::after{
+    width:100%;
+}
+/* Le bouton responsive  */
+.btn-responsive-menu{
+    position: fixed;
+    top: 15px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    display: none;
+    cursor: pointer;
+}
+.lignes{
+    width:100%;
+    height:3px;
+    border-radius: 5px;
+    background: #000;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+}
+.lignes:nth-child(1){
+    top:0px;
+}
+.lignes:nth-child(2){
+    top:10px;
+}
+.lignes:nth-child(3){
+    top:20px;
+}
+/* Animation sur le bouton burger  */
+/* Lorsque l'élément ".btn-responsive-menu" possède la class ".active" alors son enfant ".lignes:nth-child(1)" on applique la rotation pour former la première partie de la croix  */
+.btn-responsive-menu.active .lignes:nth-child(1){
+top:12px;
+transform: rotate(135deg);
+}
+/* On fait disparaître la seconde ligne en le faisant glissé et disparaitre sur la gauche */
+.btn-responsive-menu.active .lignes:nth-child(2){
+    opacity:0;
+    transform: translateX(-20px);
+    }
+/* On fait rejoindre la troisième ligne sur la première et on fait une rotation inverse pour former la croix finale en complétant la première partie  */
+    .btn-responsive-menu.active .lignes:nth-child(3){
+        top:12px;
+        transform: rotate(-135deg);
+        }
+
+     /* Mode 700px de la NAVIGATION responsive, a partir de 700px notre css change */   
+@media screen and (max-width:700px) {
+    .btn-responsive-menu{
+        display: block;
+    }
+    .item::after{
+        display: none;
+    }
+    .list-nav{
+        top: -250px;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .list-nav .item{
+width:100%;
+height:50px;
+background: #f1f1f1;
+color: #333;
+margin-top: -1px;
+    }
+    .list-nav.active-menu{
+        top:50px;
+    }
+}
+
+/* fin de NAVIGATION  */
