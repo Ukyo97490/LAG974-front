@@ -1,6 +1,6 @@
 
 <nav>
-        <a class="logo" href="index.html"><img src="img/logo.png" width="150vw" height="100%"  alt="Logo"></a>
+        <a class="logo" href="index.php"><img src="img/logo.png" width="150vw" height="100%"  alt="Logo"></a>
        <ul class="list-nav">
 
             <li class="item"><a href="index.php"> Accueil</a></li>
