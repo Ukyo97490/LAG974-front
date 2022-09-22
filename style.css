@@ -98,6 +98,24 @@ transform: rotate(135deg);
         transform: rotate(-135deg);
         }
 
+        footer{
+            margin: auto;
+            width: 100%;
+            height:55px;
+            background: linear-gradient(55deg, #212121 0%, #212121 40%, #323232 calc(40% + 1px), #323232 80%, #008F95 calc(80% + 1px), #008F95 85%, #14FFEC calc(85% + 1px), #14FFEC 100%);
+            padding: 15px 23px;
+            text-align: center;
+            color: white;
+        }
+    
+    footer span a{
+        color: rgb(179, 147, 6);
+        text-decoration: none;
+    }
+    footer span a:hover{
+        text-decoration: underline;
+    }
+
      /* Mode 700px de la NAVIGATION responsive, a partir de 700px notre css change */   
 @media screen and (max-width:700px) {
     nav{
@@ -137,3 +155,4 @@ margin-top: -1px;
   width:100vw;
 background: #bb1b1b;
 }
+
